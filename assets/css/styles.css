@@ -225,6 +225,9 @@ img{
     border-radius: 50%;
     overflow: hidden;
 }
+.about__img img {
+    width: 100%;
+}
 .about__subtitle{
     font-size: var(--h2-font-size);
     color: var(--first-color);
