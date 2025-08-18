@@ -77,3 +77,25 @@ sr.reveal('.contact__button', {delay: 600})
 
 
 
+ window.addEventListener("scroll", function() {
+      let skillsSection = document.getElementById("skills");
+      let sectionPosition = skillsSection.getBoundingClientRect().top;
+      let screenPosition = window.innerHeight / 1.3;
+
+      if(sectionPosition < screenPosition){
+        skillsSection.classList.add("show");
+      }
+    });
+    window.addEventListener("scroll", checkCertificates);
+window.addEventListener("load", checkCertificates);
+
+function checkCertificates() {
+  let certImages = document.querySelectorAll(".certificates-container img");
+  certImages.forEach(img => {
+    let position = img.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight / 1.2;
+    if (position < screenPosition) {
+      img.classList.add("show");
+    }
+  });
+}
